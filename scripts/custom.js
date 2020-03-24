@@ -185,20 +185,22 @@ $(document).ready(function () {
 		textBtnNext: MCF.Locales.get('next')
 	});
 
-	$('[data-flickity="banner"]').flickity({
-		cellAlign: 'left',
-		contain: true,
-		pageDots: false,
-		wrapAround: true
+	MCF.Sliders.init({
+		'default': {
+			contain: true,
+			cellAlign: 'left'
+		},
+		'banner': {
+			autoPlay: true,
+			pageDots: false,
+			wrapAround: true
+		},
+		'list': {
+			groupCells: '80%',
+			pageDots: false
+		}
 	});
-	
-	$('[data-flickity="list"]').flickity({
-		cellAlign: 'left',
-		contain: true,
-		groupCells: '80%',
-		pageDots: false,
-	});
-	
+
 	//--------------------------------------------------------------------------
 	// Search
 	//--------------------------------------------------------------------------

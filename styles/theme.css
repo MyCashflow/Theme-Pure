@@ -2222,8 +2222,7 @@ blockquote {
 strong {
   font-weight: bold; }
 
-h1, .H1, h2, .LogoLink, .H2, h3, table caption, .ProductCardPrices span, .H3, h4, .H4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, .H5,
-h6, .H6 {
+h1, .H1, h2, .LogoLink, .H2, h3, table caption, .ProductCardPrices span, .H3, h4, .H4, h5, .LiveSearchTitle, #OrderProductsTable .ProductName, .SearchFilterTitle, .H5, h6, .H6 {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   margin: 48px 0 24px; }
@@ -2376,11 +2375,11 @@ form button.Active,
   border-color: #e74c3c;
   color: #e74c3c !important; }
 
-.Button-Primary:hover, form [type='submit']:hover, #OrderDocuments a:hover {
+.Button-Primary:hover, form :hover[type='submit'], #OrderDocuments a:hover {
   background-color: #e74c3c;
   color: #fefefe !important; }
 
-.Button-Primary:active, form [type='submit']:active, #OrderDocuments a:active,
+.Button-Primary:active, form :active[type='submit'], #OrderDocuments a:active,
 .Button-Primary.Active,
 form .Active[type='submit'],
 #OrderDocuments a.Active {
@@ -3356,8 +3355,7 @@ form .Active[type='submit'],
   border-color: #dd3333;
   color: #333333; }
 
-.Notification > :last-child, .GroupErrorMessage > :last-child,
-.FormNotification > :last-child, #OrderStatus > :last-child {
+.Notification > :last-child, .GroupErrorMessage > :last-child, .FormNotification > :last-child, #OrderStatus > :last-child {
   margin-bottom: 0; }
 
 .NotificationCenter {
@@ -3368,8 +3366,8 @@ form .Active[type='submit'],
   width: 480px;
   z-index: 10000; }
 
-.NotificationCenter > .Notification, .NotificationCenter > .GroupErrorMessage, .NotificationCenter >
-.FormNotification, .NotificationCenter > #OrderStatus {
+.NotificationCenter > .Notification, .NotificationCenter > .GroupErrorMessage,
+.NotificationCenter > .FormNotification, .NotificationCenter > #OrderStatus {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px; }
 
@@ -3381,8 +3379,8 @@ form .Active[type='submit'],
     right: 10px;
     top: auto;
     width: auto; }
-  .NotificationCenter > .Notification, .NotificationCenter > .GroupErrorMessage, .NotificationCenter >
-  .FormNotification, .NotificationCenter > #OrderStatus {
+  .NotificationCenter > .Notification, .NotificationCenter > .GroupErrorMessage,
+  .NotificationCenter > .FormNotification, .NotificationCenter > #OrderStatus {
     margin: 5px 0 0; } }
 
 .ExtShareButtons {
@@ -3524,7 +3522,7 @@ form .Active[type='submit'],
   position: absolute;
   right: 0;
   top: 0;
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.75));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
   color: #fefefe;
   padding: 48px 24px;
   text-align: center;
@@ -4214,10 +4212,10 @@ a.BackLink[href='/'] {
 .BrandHeader input,
 .BrandHeader button,
 .BrandHeader .Button,
-.BrandHeader form button, form
-.BrandHeader button,
-.BrandHeader #OrderDocuments a, #OrderDocuments
-.BrandHeader a {
+.BrandHeader form button,
+form .BrandHeader button,
+.BrandHeader #OrderDocuments a,
+#OrderDocuments .BrandHeader a {
   padding: 12px;
   height: auto; }
 
@@ -4310,8 +4308,8 @@ a.BackLink[href='/'] {
   display: none;
   z-index: 10; }
 
-.Loader > .Notification, .Loader > .GroupErrorMessage, .Loader >
-.FormNotification, .Loader > #OrderStatus {
+.Loader > .Notification, .Loader > .GroupErrorMessage,
+.Loader > .FormNotification, .Loader > #OrderStatus {
   left: 10px;
   position: absolute;
   top: 10px; }
@@ -5461,59 +5459,22 @@ h1 + .ProductCategories,
 #MobileSearchForm label {
   display: none; }
 
-.slick-arrow {
-  line-height: 20px;
-  padding: 4px;
-  position: absolute;
-  width: 40px;
-  z-index: 1; }
-
-.slick-arrow > .fa {
-  margin: 0; }
-
-.slick-prev,
-.slick-next {
-  bottom: 15px; }
-
-.slick-prev {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  right: 55px; }
-
-.slick-next {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  right: 15px; }
-
-.slick-slide:focus {
-  outline: 0; }
-
-.slick-slide img {
-  display: inline-block; }
-
 .flickity-prev-next-button.previous {
-  left: 0; }
+  left: -15px; }
 
 .flickity-prev-next-button.next {
-  right: 0; }
-
-.flickity-rtl .flickity-prev-next-button.previous {
-  left: auto;
-  right: 0; }
-
-.flickity-rtl .flickity-prev-next-button.next {
-  right: auto;
-  left: 0; }
+  right: -15px; }
 
 .flickity-prev-next-button {
+  border-radius: 50% !important;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  height: 40px;
   width: 40px;
-  height: 100%;
-  border-radius: 0 !important;
-  background: transparent;
   z-index: 2; }
 
 .flickity-prev-next-button:hover {
-  background: transparent; }
+  background: #f9f9f9; }
 
 .flickity-prev-next-button .arrow {
   fill: #333333; }
@@ -5522,9 +5483,27 @@ h1 + .ProductCategories,
   color: #333333; }
 
 .flickity-prev-next-button:disabled {
+  opacity: 0; }
+
+.flickity-page-dots {
+  bottom: -22px; }
+
+.flickity-page-dots li:only-child {
   display: none; }
 
-@media screen and (max-width: 1024px) {
+.Banners-Wide .flickity-page-dots .dot {
+  height: 4px;
+  width: 10px;
+  margin: 0;
+  border-radius: 0; }
+
+.Banners-Wide .flickity-page-dots {
+  bottom: 20px; }
+
+.Banners-Wide .flickity-page-dots .dot {
+  background-color: #ffffff; }
+
+@media screen and (max-width: 1200px) {
   .flickity-prev-next-button {
     display: none; } }
 

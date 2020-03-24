@@ -1,74 +1,25 @@
 //------------------------------------------------------------------------------
-// Slick Slider
-//------------------------------------------------------------------------------
-
-.slick-arrow {
-	line-height: 20px;
-	padding: 4px;
-	position: absolute;
-	width: 40px;
-	z-index: 1;
-}
-
-.slick-arrow > .fa {
-	margin: 0;
-}
-
-.slick-prev,
-.slick-next {
-	bottom: 15px;
-}
-
-.slick-prev {
-	border-bottom-right-radius: 0;
-	border-top-right-radius: 0;
-	right: 55px;
-}
-
-.slick-next {
-	border-bottom-left-radius: 0;
-	border-top-left-radius: 0;
-	right: 15px;
-}
-
-.slick-slide:focus {
-	outline: 0;
-}
-
-.slick-slide img {
-	display: inline-block;
-}
-
-//------------------------------------------------------------------------------
 // Flickity
 //------------------------------------------------------------------------------
 
 .flickity-prev-next-button.previous {
-	left: 0;
+	left: -15px;
 }
 .flickity-prev-next-button.next {
-	right: 0;
-}
-
-.flickity-rtl .flickity-prev-next-button.previous {
-	left: auto;
-	right: 0;
-}
-.flickity-rtl .flickity-prev-next-button.next {
-	right: auto;
-	left: 0;
+	right: -15px;
 }
 
 .flickity-prev-next-button {
+	border-radius: 50% !important;
+	background: $color-button-bg;
+	border: 1px solid $color-body-border;
+	height: 40px;
 	width: 40px;
-	height: 100%;
-	border-radius: 0 !important;
-	background: transparent;
 	z-index: 2;
 }
 
 .flickity-prev-next-button:hover {
-	background: transparent;
+	background: darken($color-button-bg, 2.5%);
 }
 
 .flickity-prev-next-button .arrow {
@@ -80,11 +31,34 @@
 }
 
 .flickity-prev-next-button:disabled {
-  display: none;
+	opacity: 0;
 }
 
-@media screen and (max-width: $breakpoint-tablet) {
-	.flickity-prev-next-button {
+.flickity-page-dots {
+	bottom: -22px;
+}
+
+.flickity-page-dots li:only-child {
+	display: none;
+}
+
+.Banners-Wide .flickity-page-dots .dot {
+	height: 4px;
+	width: 10px;
+	margin: 0;
+	border-radius: 0;
+}
+
+.Banners-Wide .flickity-page-dots {
+	bottom: 20px;
+}
+
+.Banners-Wide .flickity-page-dots .dot {
+	background-color: $color-button-bg;
+}
+
+@media screen and (max-width: $breakpoint-desktop) {
+	.flickity-prev-next-button  {
 		display: none;
 	}
 }

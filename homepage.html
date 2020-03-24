@@ -1,7 +1,7 @@
 {Helper(file: 'helpers/header')}
 {Banners(
 	name: 'frontpage',
-	before: '<div class="Banners Banners-Wide Banners-Wide-Contained"  data-flickity="banner">',
+	before: '<div class="Banners Banners-Wide Banners-Wide-Contained"  data-slider="banner">',
 	after: '</div>',
 	helper: '{{
 		<div class="Banner Banner-Wide">
@@ -36,7 +36,7 @@
 						<div class="ContentSection">
 							<h2 class="ContentTitle ContentTitle-Fancy">{%ProductsConsidered}</h2>
 							<div class="List ProductList">
-								<div class="GridList GridList-Small" data-flickity="list">',
+								<div class="GridList GridList-Small" data-slider="list">',
 					after: '
 								</div>
 							</div>
@@ -45,13 +45,14 @@
 					or: '
 						{NewProducts(
 							limit: '14',
+							timelimit: '-10years',
 							type: 'normal',
 							classes: 'ListProduct-Compact',
 							before: '
 								<div class="ContentSection">
 									<h2 class="ContentTitle ContentTitle-Fancy">{%NewProducts}</h2>
 									<div class="List ProductList">
-										<div class="GridList GridList-Small" data-flickity="list">',
+										<div class="GridList GridList-Small" data-slider="list">',
 							after: '
 										</div>
 									</div>
@@ -128,7 +129,7 @@
 						<div class="ContentSection">
 							<h2 class="ContentTitle ContentTitle-Fancy">{%RecommendedProducts}</h2>
 							<div class="List ProductList">
-								<div class="GridList GridList-Wide" data-flickity="list">',
+								<div class="GridList GridList-Wide" data-slider="list">',
 					after: '
 								</div>
 							</div>
@@ -143,7 +144,7 @@
 						<div class="ContentSection">
 							<h2 class="ContentTitle ContentTitle-Fancy">{%BestsellingProducts}</h2>
 							<div class="List ProductList">
-								<div class="GridList GridList-Small" data-flickity="list">',
+								<div class="GridList GridList-Small" data-slider="list">',
 					after: '
 								</div>
 							</div>
