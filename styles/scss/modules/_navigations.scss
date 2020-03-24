@@ -383,11 +383,6 @@
 	color: $color-accent-2;
 }
 
-.MainNavigation .NavHighlight > a {
-	color: $color-accent-2;
-	font-weight: 600;
-}
-
 .MainNavigation .HasSubCategories > a {
 	@include icon-after($fa-var-angle-down);
 }
@@ -559,11 +554,6 @@
 
 .Drawer .DrawerNavigation ul ul a {
 	background-color: lighten($color-drawer-bg, 5%);
-}
-
-.Drawer .DrawerNavigation .NavHighlight > a {
-	color: $color-accent-2;
-	font-weight: bold;
 }
 
 .DrawerNavigation a[href='/account/'] {

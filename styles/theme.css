@@ -3501,9 +3501,6 @@ form .Active[type='submit'],
 .NoLink {
   cursor: default; }
 
-.NavHighlight > a {
-  color: #e74c3c; }
-
 .Banner {
   position: relative; }
 
@@ -4767,10 +4764,6 @@ h1.ContentTitle {
 .MainNavigation .Current > a {
   color: #e74c3c; }
 
-.MainNavigation .NavHighlight > a {
-  color: #e74c3c;
-  font-weight: 600; }
-
 .MainNavigation .HasSubCategories > a:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -4819,7 +4812,8 @@ h1.ContentTitle {
   text-decoration: none; }
 
 .SubNavigation .Current > a {
-  color: #e74c3c; }
+  color: #e74c3c;
+  border-color: #e74c3c; }
 
 .SideNavigation-Left {
   border-right: 1px solid #eeeeee; }
@@ -4907,10 +4901,6 @@ h1.ContentTitle {
 
 .Drawer .DrawerNavigation ul ul a {
   background-color: white; }
-
-.Drawer .DrawerNavigation .NavHighlight > a {
-  color: #e74c3c;
-  font-weight: bold; }
 
 .DrawerNavigation a[href='/account/']:before {
   display: inline-block;
@@ -5185,10 +5175,15 @@ h1.ContentTitle {
   transition-duration: 0.15s; }
 
 .ProductDiscountPrice {
-  color: #e74c3c; }
+  color: #dd3333; }
 
 .ProductComparePrice {
   text-decoration: line-through; }
+
+.Badge.ProductDiscountPercent {
+  background-color: #dd3333;
+  color: #fefefe;
+  font-weight: bold; }
 
 .ProductSection {
   border: 4px double #eeeeee;
