@@ -175,13 +175,12 @@
 .Banners-Blocks {
 	@extend %default-margin;
 	@include flexbox;
-	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap;
+	margin: -($grid-list-gutter / 2);
 }
 
 .Block {
 	@include flex(1 1 33.33%);
-	padding: .5px;
+	padding: ($grid-list-gutter / 2);
 }
 
 .Banner-Block {
@@ -215,7 +214,21 @@
 	opacity: 1;
 }
 
-@media screen and (max-width: $breakpoint-tablet) {
+@media screen and (max-width: $breakpoint-mobile-wide) {
+	.Banners-Blocks {
+		display: block;
+	}
+
+	.Banners-Blocks .Block {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 80%;
+	}
+
+	.Banners-Blocks .AspectRatio:before {
+		padding-top: 75%;
+	}
+
 	.Banner-Block .BannerContent {
 		h1, h2, h3, h4 {
 			font-size: $font-size-large;
@@ -227,8 +240,8 @@
 	}
 }
 
-@media screen and (max-width: $breakpoint-mobile-wide) {
-	.Block:first-child {
-		@include flex(1 1 100%);
+@media screen and (max-width: $breakpoint-mobile) {
+	.Banners-Blocks .Block {
+		max-width: none;
 	}
 }
