@@ -2136,7 +2136,7 @@ a {
   color: #333333; }
 
 a:hover {
-  color: #3A3A3A; }
+  color: #8A8A8A; }
 
 a {
   transition-duration: 0.15s; }
@@ -2214,7 +2214,7 @@ button, input, select, textarea {
   font: inherit; }
 
 blockquote {
-  border-left: 5px solid #3A3A3A;
+  border-left: 5px solid #8A8A8A;
   font-size: 16px;
   margin-left: 0;
   padding-left: 15px; }
@@ -2272,7 +2272,7 @@ h6, .H6 {
   font-size: 16px; }
 
 .Text-Accent {
-  color: #3A3A3A; }
+  color: #8A8A8A; }
 
 .Text-Truncate {
   overflow: hidden;
@@ -2589,7 +2589,7 @@ form .Active[type='submit'],
   color: #333333 !important; }
 
 #SearchForm #SearchInput:focus {
-  border: 1px solid #3A3A3A;
+  border: 1px solid #8A8A8A;
   outline: 0;
   position: relative;
   z-index: 1000; }
@@ -3985,7 +3985,7 @@ a.BackLink[href='/'] {
 
 .CheckoutTransferToPayment [type='submit']:hover {
   background-color: #ffffff;
-  border-color: #3A3A3A;
+  border-color: #8A8A8A;
   color: #333333 !important; }
 
 @media screen and (max-width: 600px) {
@@ -4160,9 +4160,9 @@ a.BackLink[href='/'] {
 
 .NewsletterSubscribe {
   background-color: #ffffff;
-  border: 1px solid #3A3A3A;
+  border: 1px solid #8A8A8A;
   border-radius: 3px;
-  color: #3A3A3A;
+  color: #8A8A8A;
   max-width: 440px;
   padding: 12px 15px; }
 
@@ -4173,7 +4173,7 @@ a.BackLink[href='/'] {
   display: none; }
 
 .Footer #NewsletterSubscribeForm input {
-  border-color: #3A3A3A;
+  border-color: #8A8A8A;
   margin-right: -1px;
   width: 65%; }
 
@@ -4284,7 +4284,7 @@ form .BrandHeader button,
 
 .LiveSearchResults ul a:hover,
 .LiveSearchResults ul .Active > a {
-  background-color: whitesmoke;
+  background-color: #f9f9f9;
   display: block;
   padding: 5px 15px; }
 
@@ -4350,7 +4350,7 @@ form .BrandHeader button,
   margin-left: 0; }
 
 .Badge {
-  background-color: #3A3A3A;
+  background-color: #8A8A8A;
   border-radius: 3px;
   color: #fefefe;
   display: block;
@@ -4519,7 +4519,7 @@ h1.ContentTitle {
   margin-right: 0; }
 
 .InlineNavigation li.Current > a {
-  color: #3A3A3A; }
+  color: #8A8A8A; }
 
 .InlineNavigation a[href='/account/']:before {
   display: inline-block;
@@ -4611,7 +4611,7 @@ h1.ContentTitle {
   margin-top: 0; }
 
 .SimpleNavigation .Current > a {
-  color: #3A3A3A; }
+  color: #8A8A8A; }
 
 .DropNavigation a, .SimpleDropNavigation a, .MainNavigation a {
   overflow: hidden;
@@ -4762,7 +4762,7 @@ h1.ContentTitle {
   box-shadow: inset 0 -2px; }
 
 .MainNavigation .Current > a {
-  color: #3A3A3A; }
+  color: #8A8A8A; }
 
 .MainNavigation .HasSubCategories > a:after {
   display: inline-block;
@@ -4841,7 +4841,7 @@ h1.ContentTitle {
   border-width: 0; }
 
 .SideNavigation .Current > a {
-  color: #3A3A3A; }
+  color: #8A8A8A; }
 
 .DrawerNavigation {
   margin-top: -1px; }
@@ -4885,7 +4885,7 @@ h1.ContentTitle {
   width: 45px; }
 
 .DrawerNavigation .Current > a {
-  color: #3A3A3A; }
+  color: #8A8A8A; }
 
 .DrawerNavigation .HasSubCategories > ul {
   display: none; }
@@ -5031,7 +5031,7 @@ h1.ContentTitle {
   border: 0; }
 
 .PaginationBar *:hover {
-  border-bottom-color: #3A3A3A; }
+  border-bottom-color: #8A8A8A; }
 
 .PaginationBar label,
 .PaginationBar p {
@@ -5132,7 +5132,7 @@ h1.ContentTitle {
   padding: 6px 12px; }
 
 .Pagination .CurrentPage {
-  color: #3A3A3A; }
+  color: #8A8A8A; }
 
 .Pagination .PreviousPageLink > a,
 .Pagination .PreviousPageLink.DisabledPageLink {
@@ -5440,7 +5440,7 @@ h1 + .ProductCategories,
   vertical-align: middle; }
 
 .FullSearchSuggestions a {
-  background-color: #3A3A3A;
+  background-color: #8A8A8A;
   border-radius: 3px;
   color: #fefefe;
   display: block;
@@ -5448,8 +5448,8 @@ h1 + .ProductCategories,
 
 .FullSearchSuggestions a:hover,
 .FullSearchSuggestions .Active a {
-  background-color: #545454;
-  color: #fefefe; }
+  background-color: #a4a4a4;
+  color: #333333; }
 
 .FullSearchSuggestionsTitle {
   display: inline-block;
@@ -5570,7 +5570,7 @@ h1 + .ProductCategories,
   .SiteHeader a {
     color: #333333; }
   .SiteHeader a:hover {
-    color: #3A3A3A; }
+    color: #8A8A8A; }
   .SiteHeader a {
     text-decoration: none; }
 
