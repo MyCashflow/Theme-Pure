@@ -401,19 +401,8 @@
 //------------------------------------------------------------------------------
 
 .SubNavigationBar {
-	@include box-shadow(inset 0 -3px 8px rgba(0,0,0,.025));
-	@include breakfree;
-	border-bottom: 1px solid $color-navbar-border;
+	@extend %default-margin;
 	text-align: center;
-	z-index: 1;
-}
-
-.SubNavigation {
-	@extend .MainNavigation;
-}
-
-.SubNavigation ul li {
-	text-align: initial;
 }
 
 .SubNavigationBar + .ContentSection {
@@ -422,6 +411,31 @@
 
 .SubNavigationBar + .PaginationBar {
 	margin-top: -1px;
+}
+
+.SubNavigation ul {
+	display: block;
+	list-style: none;
+	margin: -5px;
+}
+
+.SubNavigation li {
+	display: inline-block;
+}
+
+.SubNavigation a {
+	border: 1px solid $color-body-border;
+	border-radius: $border-radius;
+	display: inline-block;
+	margin: 5px;
+	min-width: 80px;
+	padding: 6px 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.SubNavigation .Current > a {
+	color: $color-accent-1;
 }
 
 //------------------------------------------------------------------------------
