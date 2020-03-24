@@ -5187,13 +5187,13 @@ h1.ContentTitle {
   border-radius: 3px;
   padding: 20px; }
 
-.ProductSection .BuyForm input,
-.ProductSection .BuyForm select,
-.ProductSection table {
+.ProductSection input:not([type='radio']):not([type='checkbox']),
+.ProductSection select {
   width: 100%; }
 
 .ProductSection table {
-  border: 0; }
+  border: 0;
+  width: 100%; }
 
 .ProductCardPrices span {
   font-weight: bold; }
