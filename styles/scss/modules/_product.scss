@@ -21,6 +21,12 @@
 	text-decoration: line-through;
 }
 
+.Badge.ProductDiscountPercent {
+	background-color: $color-discount;
+	color: text-contrast($color-discount);
+	font-weight: bold;
+}
+
 //------------------------------------------------------------------------------
 // Product Card
 //------------------------------------------------------------------------------
