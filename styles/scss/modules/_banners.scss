@@ -106,12 +106,12 @@
 	overflow: hidden;
 }
 
-.Banner-Wide .AspectRatio {
-	max-height: 550px;
+:not(.Banners-Wide-Contained) .Banner-Wide .AspectRatio {
+	max-height: 585px;
 }
 
 .Banner-Wide .AspectRatio:before {
-	padding-top: 40%;
+	padding-top: 50%;
 }
 
 .Banner-Wide .BannerContainer {
@@ -127,20 +127,10 @@
 	@extend .Container;
 }
 
-@media screen and (max-width: $breakpoint-tablet) {
-	.Banner-Wide .AspectRatio:before {
-		padding-top: 50%;
-	}
-}
-
 @media screen and (max-width: $breakpoint-mobile) {
 	.Banners-Wide-Contained {
 		margin: 0 auto;
 		padding: 0;
-	}
-	
-	.Banner-Wide .AspectRatio:before {
-		padding-top: 50%;
 	}
 }
 
