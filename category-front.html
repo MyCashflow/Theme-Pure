@@ -14,21 +14,7 @@
 					)}
 					{CategoryDescription}
 				</div>
-				{Categories(
-					start: '1',
-					before: '
-						<div class="ContentSection SubNavigationBar">
-							<div class="Container">
-								<div class="Flex Flex-NoMargin">
-									<div class="FlexItem FlexSpacer">
-										<div class="SubNavigation">',
-					after: '
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>'
-				)}
+				{Helper(file: 'helpers/subcategories')}
 				{Helper(file: 'helpers/pagination-form')}
 				<div class="ContentSection">
 					{CategoryProducts(
