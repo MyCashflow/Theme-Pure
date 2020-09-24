@@ -56,8 +56,23 @@
 											)}
 										</p>
 										{ProductShortDesc}
-										{ProductBundles}
 									</div>
+									{ProductBundles(
+										before: '
+										<div class="ContentSection">
+											<h3>{%ProductIncludesInBundles}</h3>',
+											helper: '{{
+												<div class="BuyColumnBundle">
+													<a class="CoverLink" href="{BundleUrl}"></a>
+													{BundleImage(link:'false')}
+													<div class="BuyColumnBundleInfo">
+														{BundleName(link:'false',before:'<label for="BuyColumnBundleName">',after: '</label>')}
+														{BundlePrice(before:'<div class="BuyColumnBundlePrice">',after: '</div>')}
+													</div>
+												</div>
+											</div>
+										}}'
+									)}
 									<div class="ContentSection">
 										{ProductAvailability}
 										{ProductBuy(variations: 'select')}

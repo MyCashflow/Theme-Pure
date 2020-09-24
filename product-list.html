@@ -31,6 +31,20 @@
 						helper: 'helpers/list-product'
 					)}
 				</div>
+				{Bundles(
+					category: '{CategoryId}',
+					type: 'normal',
+					before: '
+					<div class="ContentSection">
+						<h2 class="ContentTitle">{%ProductBundles}</h2>
+						<div class="List ProductList">
+							<div class="GridList GridList-Wide">',
+								after: '
+							</div>
+						</div>
+					</div>',
+					helper: 'helpers/list-bundle'
+				)}
 			</div>
 		</div>
 	</div>
