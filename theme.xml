@@ -13,6 +13,7 @@
 		</Checkout>
 		<GiftCards supported="true" />
 		<ProductBundles supported="true" />
+		<ProductListFilters supported="true" />
 	</Features>
 	<Settings>
 		<Doctype standard="HTML5" />

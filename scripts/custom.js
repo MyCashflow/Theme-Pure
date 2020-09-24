@@ -15,7 +15,7 @@ $(document).ready(function () {
 		motionThreshold: 5
 	};
 
-	var plugins = ['Drawers', 'Loaders', 'Navigations', 'Notifications', 'Spinners', 'Tabs'];
+	var plugins = ['Drawers', 'Filters', 'Loaders', 'Navigations', 'Notifications', 'Spinners', 'Tabs'];
 	$.each(plugins, function (index, name) {
 		var plugin = MCF[name];
 		if (plugin) {
