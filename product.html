@@ -86,6 +86,19 @@
 										{ProductAvailability}
 										{ProductBuy(variations: 'select')}
 									</div>
+									{ProductFeatures(
+										before:'
+										<div class="ContentSection">
+											<h3>{Text(code: 'ProductFeatures', or: 'Tuoteominaisuudet:')}</h3>',
+											after:'
+										</div>',
+										helper: '{{
+											<div class="ProductFeatures">
+												<label class="ProductAttributeLabel">{ProductAttributeLabel}:</label>
+												<span class="ProductAttributeValues">{ProductAttributeValues}</span>
+											</div>
+										}}'
+									)}
 									<div class="ContentSection">
 										{ProductFullDesc}
 										<div class="ShareSection">
