@@ -67,7 +67,7 @@
 }
 
 .FilterGroup.ActiveGroup .FilterGroupName {
-	border-color: $color-text-dark;
+	border-bottom: 1px solid $color-accent-1;
 }
 
 .FilterGroup.ActiveGroup .FilterList {

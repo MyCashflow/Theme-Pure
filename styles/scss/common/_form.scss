@@ -363,7 +363,7 @@ form [type='submit'] {
 .BuyForm [type='submit'] {
 	@include icon-before($fa-var-shopping-cart);
 	padding: 12px 48px;
-	
+
 	&:before {
 		font-size: $font-size-large;
 	}
@@ -444,10 +444,6 @@ form [type='submit'] {
 	border-radius: $border-radius;
 	margin-bottom: 24px;
 	padding: 15px;
-}
-
-.CampaignCodeForm form {
-	margin-bottom: 0;
 }
 
 .CampaignCodeForm input[type='hidden'] + button {
