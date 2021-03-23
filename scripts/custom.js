@@ -15,7 +15,7 @@ $(document).ready(function () {
 		motionThreshold: 5
 	};
 
-	var plugins = ['Drawers', 'Loaders', 'Navigations', 'Notifications', 'Spinners', 'Tabs'];
+	var plugins = ['Drawers', 'Filters', 'Loaders', 'Navigations', 'Notifications', 'Spinners', 'Tabs'];
 	$.each(plugins, function (index, name) {
 		var plugin = MCF[name];
 		if (plugin) {
@@ -207,13 +207,13 @@ $(document).ready(function () {
 
 	var searchInput = $('#SearchInput'),
 			searchBg = $('.LiveSearchBackground');
-			
+
 	searchInput.attr("placeholder", MCF.Locales.get('search'));
 
 	searchInput.focus(function () {
 		searchBg.addClass('Visible');
 	});
-	
+
 	searchInput.blur(function () {
 		searchBg.removeClass('Visible');
 	});
@@ -232,6 +232,11 @@ $(document).ready(function () {
 
 	$(document).on('click', '[href="/terms/"]', function () {
 		MCF.Drawers.toggleByName('terms');
+		return false;
+	});
+
+  $(document).on('click', '.Drawer .GiftCardDetails', function () {
+		MCF.Drawers.toggleByName('gift-cards');
 		return false;
 	});
 
@@ -263,17 +268,17 @@ $(document).ready(function () {
 		top: 80,
 		bottomEnd: 80
 	});
-	
+
 	var $target = $('.Breadcrumb').children();
 	while ($target.length) {
 		$target = $target.children();
 	}
 	$target.end().closest("ul li").addClass('Current');
-	
+
 	$('#SubscribeEmail').focus(function () {
 		$('#NewsletterCaptchaBadge').fadeIn();
 	});
-	
+
 	$('#SubscribeEmail').blur(function () {
 		$('#NewsletterCaptchaBadge').fadeOut();
 	});

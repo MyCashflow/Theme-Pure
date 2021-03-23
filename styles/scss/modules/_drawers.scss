@@ -11,7 +11,6 @@
 
 .Drawer[data-drawer-side='top'],
 .Drawer[data-drawer-side='bottom'] {
-	height: 300px;
 	left: 0;
 	overflow-x: auto;
 	width: 100%;
@@ -81,6 +80,45 @@
 	margin-bottom: 0;
 }
 
+
+//------------------------------------------------------------------------------
+// Gift Card Details
+//------------------------------------------------------------------------------
+
+.GiftCard {
+	border: 1px solid $color-drawer-border;
+	border-radius: $border-radius-medium;
+	margin: 15px;
+	padding: 15px;
+}
+
+.GiftCardTitle {
+	margin-bottom: 0;
+}
+
+.GiftCardHeader {
+	border-bottom: 1px solid $color-body-border;
+	padding: 15px;
+}
+
+.GiftCard h4 {
+	margin-bottom: 5px;
+}
+
+.GiftCard p {
+	margin-bottom: 0;
+}
+
+.GiftCard form,
+.GiftCard .FormItem {
+	margin: 0;
+}
+
+.GiftCard button {
+	margin: 10px 0 0;
+	padding: 0 6px;
+}
+
 //------------------------------------------------------------------------------
 // Drawer Container
 //------------------------------------------------------------------------------
@@ -108,4 +146,12 @@
 .DrawerOverlay.Visible {
 	opacity: 0.25;
 	visibility: visible;
+}
+
+//------------------------------------------------------------------------------
+// Drawer Title
+//------------------------------------------------------------------------------
+
+.DrawerTitle {
+	padding: 20px 15px 0;
 }

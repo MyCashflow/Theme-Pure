@@ -1,0 +1,58 @@
+{Helper(file: 'helpers/header')}
+{Helper(file: 'helpers/path')}
+<div class="SiteContent">
+	<div class="Container">
+    <div class="ContentSection">
+			<h1 class="ContentTitle">{BundleName}</h1>
+		</div>
+		<div class="ContentSection">
+			<div class="Grid">
+				<div class="Col Col-12-12">
+					<section class="ProductSection {BundleClass}">
+						<div class="Grid">
+							<div class="Col Col-6-12 Col-Tablet-12-12">
+								{BundleImage}
+								{BundleImageCaption}
+								{BundleThumbnails}
+							</div>
+							<div class="Col Col-6-12 Col-Tablet-12-12">
+								<div class="ProductBuyColumn">
+									<div class="ContentSection">
+										<p class="ProductPrices ProductCardPrices">
+											{BundleComparePrice(
+												currencysymbol: 'true',
+												before: '
+													{BundlePrice(
+														currencysymbol: 'true',
+														before: '<span class="ProductDiscountPrice">',
+														after: '</span>'
+													)}
+													<span class="ProductComparePrice">',
+												after: '</span>',
+												or: '
+													{BundlePrice(
+														currencysymbol: 'true',
+														before: '<span class="ProductCurrentPrice">',
+														after: '</span>'
+													)}'
+											)}
+										</p>
+									</div>
+									{BundleAvailability}
+                  {BundleProducts}
+                  {BundleBuy(variations: 'select')}
+									{ShareButtons(
+										before: '<div class="ContentSection">
+											<div class="ShareSection">',
+										after: '</div></div>'
+									)}
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{Helper(file: 'helpers/footer')}
