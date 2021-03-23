@@ -2608,9 +2608,6 @@ form .Active[type='submit'],
   margin-bottom: 24px;
   padding: 15px; }
 
-.CampaignCodeForm form {
-  margin-bottom: 0; }
-
 .CampaignCodeForm input[type='hidden'] + button {
   float: none;
   width: 100%; }
@@ -3692,8 +3689,6 @@ form .Active[type='submit'],
     margin-left: auto;
     margin-right: auto;
     max-width: 80%; }
-  .Banners-Blocks .AspectRatio:before {
-    padding-top: 75%; }
   .Banner-Block .BannerContent h1, .Banner-Block .BannerContent h2, .Banner-Block .BannerContent .LogoLink, .Banner-Block .BannerContent h3, .Banner-Block .BannerContent table caption, table .Banner-Block .BannerContent caption, .Banner-Block .BannerContent .ProductCardPrices span, .ProductCardPrices .Banner-Block .BannerContent span, .Banner-Block .BannerContent h4 {
     font-size: 16px;
     margin-bottom: 0; }
@@ -4024,7 +4019,6 @@ a.BackLink[href='/'] {
 
 .Drawer[data-drawer-side='top'],
 .Drawer[data-drawer-side='bottom'] {
-  height: 300px;
   left: 0;
   overflow-x: auto;
   width: 100%; }
@@ -4114,6 +4108,33 @@ a.BackLink[href='/'] {
 .DrawerSection > :last-child {
   margin-bottom: 0; }
 
+.GiftCard {
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  margin: 15px;
+  padding: 15px; }
+
+.GiftCardTitle {
+  margin-bottom: 0; }
+
+.GiftCardHeader {
+  border-bottom: 1px solid #eeeeee;
+  padding: 15px; }
+
+.GiftCard h4 {
+  margin-bottom: 5px; }
+
+.GiftCard p {
+  margin-bottom: 0; }
+
+.GiftCard form,
+.GiftCard .FormItem {
+  margin: 0; }
+
+.GiftCard button {
+  margin: 10px 0 0;
+  padding: 0 6px; }
+
 .DrawerContainer {
   position: relative;
   transition-duration: 0.3s; }
@@ -4138,6 +4159,9 @@ a.BackLink[href='/'] {
 .DrawerOverlay.Visible, .Visible.LiveSearchBackground {
   opacity: 0.25;
   visibility: visible; }
+
+.DrawerTitle {
+  padding: 20px 15px 0; }
 
 .Footer {
   padding: 48px 0 96px 0; }
@@ -4878,6 +4902,11 @@ h1.ContentTitle {
   top: 0;
   width: 45px; }
 
+.Filters .DrawerNavigation .NavigationExpander {
+  padding-right: 20px;
+  text-align: right;
+  width: 100%; }
+
 .DrawerNavigation .Current > a {
   color: #009FB7; }
 
@@ -5002,6 +5031,16 @@ h1.ContentTitle {
 #OrderCancel {
   margin-top: 40px; }
 
+.FiltersPagination {
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin: 24px 0 48px; }
+
 .PaginationBar {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -5012,9 +5051,7 @@ h1.ContentTitle {
   left: 50%;
   background-color: #ffffff;
   border: 1px solid #eeeeee;
-  border-width: 1px 0;
-  margin-bottom: 48px;
-  margin-top: 24px; }
+  border-width: 1px 0; }
 
 .PaginationBar-Bottom {
   display: -webkit-box;
@@ -5058,6 +5095,15 @@ h1.ContentTitle {
 .PaginationBar .Pagination ul {
   display: block; }
 
+@media (min-width: 1024px) {
+  .PaginationBar .Container, .PaginationBar .BannerContainer, .PaginationBar .Banners-Wide-Contained {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between; } }
+
 @media screen and (max-width: 1024px) {
   .PaginationBar .PaginationStatus {
     display: none; } }
@@ -5066,6 +5112,8 @@ h1.ContentTitle {
   .PaginationBar {
     border: 0;
     box-shadow: none; }
+  .PaginationBar .FlexItem {
+    width: 100%; }
   .PaginationBar .Flex .FlexItem {
     display: -webkit-box;
     display: -moz-box;
@@ -5205,6 +5253,53 @@ h1.ContentTitle {
   .ProductBuyColumn {
     border-left: 1px solid #eeeeee;
     padding: 20px 0 20px 20px; } }
+
+.BuyColumnBundle img {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  margin: 0 20px 0 0;
+  max-height: 60px;
+  max-width: 60px;
+  object-fit: contain;
+  padding: 10px; }
+
+.BuyColumnBundle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 10px 0;
+  position: relative; }
+
+.CoverLink {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.BuyColumnBundlePrice {
+  margin-top: -5px; }
+
+.ProductQuantityDiscounts dt {
+  display: inline-block;
+  margin-top: 0;
+  width: 70px; }
+
+.ProductQuantityDiscounts dd {
+  display: inline-block;
+  width: calc(100% - 70px); }
+
+.ProductFeatures {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.ProductAttributeLabel {
+  margin-right: 5px; }
 
 .ListProduct {
   position: relative;
