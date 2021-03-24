@@ -2120,7 +2120,7 @@ a, button {
 [disabled] {
   opacity: 0.5; }
 
-select::-ms-expand {
+select::-ms-expand, .FilterGroupName::-ms-expand {
   display: none; }
 
 body {
@@ -2209,7 +2209,7 @@ body {
   font: 14.4px/24px "Open Sans", sans-serif;
   font-weight: 300; }
 
-button, input, select, textarea {
+button, input, select, .FilterGroupName, textarea {
   color: inherit;
   font: inherit; }
 
@@ -2279,7 +2279,7 @@ h6, .H6 {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-input, select, textarea {
+input, select, .FilterGroupName, textarea {
   background-color: #ffffff;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
@@ -2314,7 +2314,7 @@ textarea {
   height: auto;
   resize: none; }
 
-select {
+select, .FilterGroupName {
   -moz-appearance: none;
   -webkit-appearance: none;
   background: #ffffff url("../images/angle-down-dark.png") top 50% right 14px no-repeat;
@@ -2324,11 +2324,11 @@ select {
   height: 38px;
   padding-right: 35px; }
 
-select::-ms-expand {
+select::-ms-expand, .FilterGroupName::-ms-expand {
   display: none; }
 
 @media screen and (max-width: 800px) {
-  input, select, textarea {
+  input, select, .FilterGroupName, textarea {
     display: block;
     margin: 0;
     width: 100%; } }
@@ -2434,6 +2434,7 @@ form .Active[type='submit'],
 
 .FormError > input,
 .FormError > select,
+.FormError > .FilterGroupName,
 .FormError > textarea {
   background-color: #fdf5f5 !important;
   border-color: #dd3333 !important; }
@@ -4163,6 +4164,187 @@ a.BackLink[href='/'] {
 .DrawerTitle {
   padding: 20px 15px 0; }
 
+@media (min-width: 1024px) {
+  .ProductListFilters {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
+  .ProductListFilters label {
+    margin-bottom: 0;
+    margin-right: 10px; } }
+
+.FiltersPagination {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  z-index: 3; }
+
+.FiltersPagination .Filters {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.FilterGroup {
+  margin: 0 -1px 0 0;
+  position: relative; }
+
+.FilterGroup a {
+  text-decoration: none; }
+
+.FilterGroup a:hover {
+  color: #333333; }
+
+.FilterGroupName {
+  background-image: none;
+  border-radius: 3px;
+  box-shadow: none;
+  height: auto;
+  margin: 0;
+  position: relative;
+  transition: none; }
+  .FilterGroupName:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    padding: 5px 12px;
+    position: absolute;
+    right: 0; }
+
+.FilterGroup.ActiveGroup .FilterGroupName {
+  border-bottom: 1px solid #E88CB6; }
+
+.FilterGroup.ActiveGroup .FilterList {
+  border-color: #E88CB6; }
+
+.FilterGroup.Navigable .FilterGroupName {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+  outline: 0;
+  z-index: 2; }
+  .FilterGroup.Navigable .FilterGroupName:after {
+    content: ""; }
+
+.FilterResultCount {
+  color: #999999;
+  font-size: 12.8px; }
+
+@media (max-width: 1024px) {
+  .FilterButton {
+    width: 100%; } }
+
+.FilterList {
+  background-color: #ffffff;
+  border-radius: 0 3px 3px 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: none;
+  left: 0;
+  margin: 0;
+  max-height: 300px;
+  max-width: 300px;
+  min-width: 210px;
+  outline: 0;
+  overflow: auto;
+  position: absolute;
+  top: calc(100% + 1px);
+  z-index: 1; }
+
+.Navigable .FilterList {
+  display: block; }
+
+.FilterList ul {
+  margin: 0; }
+
+.FilterList li {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  border-radius: 3px;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 3px 10px;
+  position: relative; }
+
+.FilterList li:hover {
+  background-color: #ededed; }
+
+.FilterList li.Selected {
+  box-shadow: inset 0 0 0 1px #E88CB6; }
+
+.FilterList a:before {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: '';
+  display: block; }
+
+.FilterList .RemoveFilter {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  border: none;
+  color: #333333;
+  font-size: 0;
+  justify-content: center;
+  margin-left: 5px;
+  min-width: 20px;
+  padding: 0; }
+  .FilterList .RemoveFilter:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    margin-left: 0.5em; }
+
+.FilterList .RemoveFilter:after {
+  font-size: 12.8px;
+  margin: 0; }
+
+.FilterList .RemoveFilter:before {
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px #E88CB6;
+  margin: 0; }
+
+@media screen and (max-width: 600px) {
+  .FilterList {
+    max-width: none;
+    width: 100%; } }
+
+.RemoveFilter {
+  border: 1px solid #eeeeee; }
+
+.FilterTags .RemoveFilter:before {
+  content: ""; }
+
+.ClearAllFilters .RemoveFilter:before {
+  content: ""; }
+
 .Footer {
   padding: 48px 0 96px 0; }
 
@@ -5074,7 +5256,7 @@ h1.ContentTitle {
   font-weight: normal;
   vertical-align: middle; }
 
-.PaginationBar select,
+.PaginationBar select, .PaginationBar .FilterGroupName,
 .PaginationBar input {
   border-color: #eeeeee;
   border-radius: 0;
@@ -5084,7 +5266,7 @@ h1.ContentTitle {
 .PaginationBar .PaginationForm {
   margin: 0; }
 
-.PaginationBar .FlexItem:last-child select {
+.PaginationBar .FlexItem:last-child select, .PaginationBar .FlexItem:last-child .FilterGroupName {
   margin-right: -1px; }
 
 .PaginationBar .Pagination {
@@ -5126,8 +5308,7 @@ h1.ContentTitle {
     margin-right: -1px;
     min-width: 50%;
     padding: 6px 12px; }
-  .PaginationBar .Pagination,
-  .PaginationBar select,
+  .PaginationBar .Pagination, .PaginationBar select, .PaginationBar .FilterGroupName,
   .PaginationBar input {
     margin-top: 0;
     margin-bottom: 0 !important; } }
@@ -5233,7 +5414,8 @@ h1.ContentTitle {
   padding: 20px; }
 
 .ProductSection input:not([type='radio']):not([type='checkbox']),
-.ProductSection select {
+.ProductSection select,
+.ProductSection .FilterGroupName {
   width: 100%; }
 
 .ProductSection table {
@@ -5696,3 +5878,32 @@ h1 + .ProductCategories,
     border-width: 1px 0 0;
     margin: 0 -15px;
     padding: 20px 15px 0; } }
+
+.TagsList, .FilterTags {
+  list-style: none; }
+
+.TagsList li, .FilterTags li {
+  display: inline-block;
+  margin: 2px 3px; }
+
+.TagsList li:first-child, .FilterTags li:first-child {
+  margin-left: 0; }
+
+.TagsList li:last-child, .FilterTags li:last-child {
+  margin-right: 0; }
+
+.Tag, .RemoveFilter {
+  background-color: #ffffff;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none; }
+  .Tag:before, .RemoveFilter:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    margin-right: 0.5em; }
