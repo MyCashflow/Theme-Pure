@@ -12,10 +12,8 @@
 						after: '</div>'
 					)}
 					{CampaignDescription}
-					{Helper(file: 'helpers/pagination-form')}
-					{CampaignProducts(
-						sort: 'sales_desc|released_desc|price_asc|price_desc|name_asc',
-						pagination: 'true',
+					{Helper(file: 'helpers/product-list-filters')}
+					{Products(
 						type: 'normal',
 						before: '
 							<div class="List ProductList">
