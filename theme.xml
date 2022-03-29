@@ -21,16 +21,14 @@
 		<Doctype standard="HTML5" />
 	</Settings>
 	<ThemeSettings>
-		<SettingGroup label="colors" description="colors_description">
-			<Setting type="select" name="color_theme" label="color_theme" default="theme">
-				<Option value="theme-black" label="Black" />
-				<Option value="theme-brown" label="Brown" />
-				<Option value="theme-green" label="Green" />
-				<Option value="theme-mint" label="Mint" />
-				<Option value="theme-pink" label="Pink" />
-				<Option value="theme-purple" label="Purple" />
-				<Option value="theme" label="White" />
-			</Setting>
-		</SettingGroup>
+		<Setting type="select" name="color_theme" label="color_theme" default="theme">
+			<Option value="theme-black" label="Black" />
+			<Option value="theme-brown" label="Brown" />
+			<Option value="theme-green" label="Green" />
+			<Option value="theme-mint" label="Mint" />
+			<Option value="theme-pink" label="Pink" />
+			<Option value="theme-purple" label="Purple" />
+			<Option value="theme" label="White" />
+		</Setting>
 	</ThemeSettings>
 </Theme>
