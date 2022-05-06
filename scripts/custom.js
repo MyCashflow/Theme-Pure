@@ -196,8 +196,9 @@ $(document).ready(function () {
 			wrapAround: true
 		},
 		'list': {
-			groupCells: '80%',
-			pageDots: false
+			groupCells: '100%',
+			pageDots: false,
+      watchCSS: true
 		}
 	});
 

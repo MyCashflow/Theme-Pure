@@ -1,4 +1,30 @@
 //------------------------------------------------------------------------------
+// Mobile Sliders
+//------------------------------------------------------------------------------
+
+[data-slider="list"]:after {
+	content: 'flickity';
+	display: none;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+	[data-slider="list"]:after {
+		content: '';
+		display: none;
+	}
+
+	.GridList[data-slider="list"] {
+		@include hscrollable;
+		@include flex-wrap(nowrap !important);
+
+		.ListItem {
+			float: none;
+			white-space: normal;
+		}
+	}
+}
+
+//------------------------------------------------------------------------------
 // Flickity
 //------------------------------------------------------------------------------
 

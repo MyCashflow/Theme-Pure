@@ -220,8 +220,7 @@ form [type='submit'] {
 
 .GroupErrorMessage,
 .FormNotification {
-	@extend .Notification;
-	@extend .Notification.Error;
+	@extend .Notification, .Error;
 }
 
 @media screen and (max-width: $breakpoint-mobile) {
